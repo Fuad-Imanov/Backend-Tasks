@@ -1,0 +1,8 @@
+Employee table-ı yaradırsız 
+    - Id - avtomatik artmalıdı, null olmamalıdı və təkrarlanmamalıdı
+    - Fullname - null ola bilməz uzunluğu 255 olmalıdır
+    - Age - sıfırdan kiçik və null ola bilməz
+    - Email - null ola bilməz və təkrarlanan olmamalıdı
+    - Salary - null ola bilməz və 300 ilə 2000 arası olmalıdır, kəsr ədəd olmalıdır
+Employee table-na datalar əlavə edirsiz.
+ Employee-lərin bütün məlumatlarını göstərirsiz.

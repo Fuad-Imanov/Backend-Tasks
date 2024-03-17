@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "CdVPmLxaYpFqEtAMnCRVM8kGLtf325eeKFGnULJjJeItXlF06TgkubtfTPdmcUIKpUyrPVBtmSt6lK73M5yhIw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer06\\Pictures\\Backend Tasks\\Task_1_2_3_4\\Task_4_StringExtension\\Task_4_StringExtension.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

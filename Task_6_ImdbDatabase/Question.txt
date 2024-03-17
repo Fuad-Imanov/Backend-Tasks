@@ -1,0 +1,30 @@
+https://www.imdb.com/chart/top/
+
+https://www.imdb.com/title/tt0468569/?pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=1a264172-ae11-42e4-8ef7-7fed1973bb8f&pf_rd_r=A8MRVY1AA1GM6F3WBM7E&pf_rd_s=center-1&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_tt_3
+
+
+Yuxarıda yerləşdirdiyim linklərə daxil olursuz və ora baxıb bir imdb database-i qurursuz.
+
+Aşağıdakı table-lar olmalıdır:
+1) Movies
+2) Directors
+3) Actors
+4) Genres
+
+
+DDL commandları vasitəsilə database yaradacaqsız və içində yuxarıdakı table-lar olacaq.
+
+Aşağıdakı queryləri DML commandlarından istifadə edərək yazcaqsınız:
+
+1) Imdb point-i 6-dan yuxarı olan filmlərin adını, imdb dəyərini, Genre adını,
+Director adını və aktyor adını gətirən select query-i yazın.
+
+2) Genre adında "a" hərfi olan bütün filmlərin adını, imdb dəyərini, Genre adını
+gətirən select query-i yazın
+
+3) Film adının uzunluğu 10-dan böyük olan və film adının sonu "t" hərfiylə bitən bütün
+filmlərin adını, imdb dəyərini, Duration dəyərini, Genre adını gətirən select query-i yazın
+
+4) Imdb point-i ümumi filmlərin imdb point-lərinin ortalamasından böyük olan filmlərin
+adını, imdb dəyərini, Genre adını, Director adını və aktyor adını gətirən və imdb dəyərinə
+görə azalan sırayla düzən select query-i yazın

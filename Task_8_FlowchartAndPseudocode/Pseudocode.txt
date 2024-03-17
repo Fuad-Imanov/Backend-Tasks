@@ -1,0 +1,17 @@
+Start
+
+Input the value of n
+
+If n is divisible by both 3 and 7 then:
+      Output "n is divisible by both 3 and 7"
+
+Else If n is divisible by 3 then:
+      Output "n is divisible by 3 but not by 7"
+
+Else If n is divisible by 7 then:
+      Output "n is divisible by 7 but not by 3"
+
+Else:
+      Output "n is not divisible by either 3 or 7"
+
+End

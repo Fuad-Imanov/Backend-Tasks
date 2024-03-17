@@ -1,0 +1,3 @@
+Aşağıdakı tapşırığı flochart və pseudocode ilə yazın.
+
+Verilmiş n ədədinin 3 və 7-ə bölünüb-bölünməməsini tapın.

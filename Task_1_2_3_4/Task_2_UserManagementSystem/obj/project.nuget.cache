@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wkk9FWRgLKTIS1sX/K3G8A06G2gyZHFfskFzAzMhObpQuQx5cvZiL22ir23APTwaDcHD1utKB/FJcSMswmgaRw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Acer06\\Pictures\\Backend Tasks\\Task_1_2_3_4\\Task_2_UserManagementSystem\\Task_2_UserManagementSystem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\Acer06\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

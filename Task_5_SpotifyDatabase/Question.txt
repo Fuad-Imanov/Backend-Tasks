@@ -1,0 +1,21 @@
+https://open.spotify.com/album/4otkd9As6YaxxEkIjXPiZ6
+
+Yuxarıdakı linkə daxil olursuz və ora baxıb spotify database-i qurursuz.
+
+Aşağıdakı table-lar olmalıdır:
+
+1) Musics
+2) Artists
+3) Albums
+
+DDL commandları vasitəsilə database yaradacaqsız və içində yuxarıdakı table-lar olacaq.
+
+
+Aşağıdakı queryləri DML commandlarından istifadə edərək yazcaqsınız:
+
+1) Musics-in name-ni, totalSecond-nu, artist name-ni, album name-ni göstərən bir view yazırsız.
+
+2) Albumun adını və həmin albumda neçə dənə mahnı var onu göstərən bir view yazırsız.
+
+3) ListenerCount-u parametr olaraq göndərilən listenerCount-dan böyük olan və Album adında parametr olaraq göndərilən search dəyəri olan bütün mahnıların adını,
+listenerCount-nu və Album adını göstərən bir procedure yazın.

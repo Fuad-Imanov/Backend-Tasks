@@ -1,0 +1,222 @@
+-- DROP DATABASE IF EXISTS Imdb;
+-- GO
+--
+-- CREATE DATABASE Imdb;
+-- GO
+--
+-- USE Imdb;
+-- GO
+--
+-- CREATE TABLE Users (
+--     Id INT PRIMARY KEY IDENTITY(1,1)
+-- );
+--
+-- CREATE TABLE Movies (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     Title NVARCHAR(50),
+--     Imdb DECIMAL NULL,
+--     Duration INT,
+--     Description NVARCHAR(MAX) NULL,
+--     OriginalTitle NVARCHAR(MAX) NULL
+-- );
+--
+-- CREATE TABLE Persons (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     Name NVARCHAR(50)
+-- );
+--
+-- CREATE TABLE Genres (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     Name NVARCHAR(50)
+-- );
+--
+-- CREATE TABLE Roles (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     Name NCHAR(50),
+--     Description NVARCHAR(MAX) NULL
+-- );
+--
+-- CREATE TABLE Ratings (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     Score FLOAT,
+--     UserId INT,
+--     MovieId INT,
+--     FOREIGN KEY (UserId) REFERENCES Users(Id),
+--     FOREIGN KEY (MovieId) REFERENCES Movies(Id)
+-- );
+--
+-- CREATE TABLE MovieGenres (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     MovieId INT,
+--     GenreId INT,
+--     FOREIGN KEY (MovieId) REFERENCES Movies(Id),
+--     FOREIGN KEY (GenreId) REFERENCES Genres(Id)
+-- );
+--
+-- CREATE TABLE MoviePersons (
+--     Id INT PRIMARY KEY IDENTITY(1,1),
+--     MovieId INT,
+--     PersonId INT,
+--     RoleId INT,
+--     FOREIGN KEY (MovieId) REFERENCES Movies(Id),
+--     FOREIGN KEY (PersonId) REFERENCES Persons(Id),
+--     FOREIGN KEY (RoleId) REFERENCES Roles(Id)
+-- );
+
+--
+-- INSERT INTO Users DEFAULT VALUES;
+-- INSERT INTO Users DEFAULT VALUES;
+-- INSERT INTO Users DEFAULT VALUES;
+-- INSERT INTO Users DEFAULT VALUES;
+-- INSERT INTO Users DEFAULT VALUES;
+--
+-- INSERT INTO Movies (Title, Imdb, Duration, Description, OriginalTitle)
+-- VALUES
+--     ('Inception', 8.8, 148, 'A thief who enters the dreams of others to steal their secrets.', 'Inception'),
+--     ('The Shawshank Redemption', 9.3, 142, 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', 'Shawshank Redemption'),
+--     ('The Godfather', 9.2, 175, 'The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.', 'The Godfather'),
+--     ('The Dark Knight', 9.0, 152, 'When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.', 'The Dark Knight'),
+--     ('Pulp Fiction', 8.9, 154, 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 'Pulp Fiction');
+--
+--
+-- INSERT INTO Persons (Name)
+-- VALUES
+--     ('Leonardo DiCaprio'),
+--     ('Morgan Freeman'),
+--     ('Marlon Brando'),
+--     ('Christian Bale'),
+--     ('John Travolta');
+--
+--
+-- INSERT INTO Genres (Name)
+-- VALUES
+--     ('Action'),
+--     ('Drama'),
+--     ('Crime'),
+--     ('Thriller'),
+--     ('Adventure');
+--
+--
+-- INSERT INTO Roles (Name, Description)
+-- VALUES
+--     ('Actor', 'Performs the roles in the movie'),
+--     ('Director', 'Responsible for the overall vision of the movie'),
+--     ('Producer', 'Oversees the making of the movie'),
+--     ('Writer', 'Creates the screenplay for the movie'),
+--     ('Cinematographer', 'Responsible for the visual aspects of the movie');
+--
+-- INSERT INTO MovieGenres (MovieId, GenreId)
+-- VALUES
+--     (1, 4),
+--     (2, 2),
+--     (3, 3),
+--     (4, 1),
+--     (5, 2);
+--
+-- INSERT INTO Ratings (Score, UserId, MovieId)
+-- VALUES
+--     (8.7, 1, 1),
+--     (9.1, 2, 2),
+--     (9.2, 3, 3),
+--     (8.9, 4, 4),
+--     (8.5, 5, 5);
+--
+--
+-- INSERT INTO MoviePersons (MovieId, PersonId, RoleId)
+-- VALUES
+--     (3, 1, 1),
+--     (1, 1, 1),
+--     (2,2, 1),
+--     (3, 3, 2),
+--     (4, 4, 1),
+--     (5, 5, 1);
+
+-- Sual 1. Imdb point-i 6-dan yuxarı olan filmlərin adını, imdb dəyərini, Genre adını,
+-- Director adını və aktyor adını gətirən select query-i yazın.
+
+-- -- SUAL 1.  1-Cİ VERSİYA
+-- WITH MovieDirectors AS (
+--     SELECT M.Title, M.Imdb, G.Name AS Genre, P.Name AS DirectorName
+--     FROM Movies M
+--     JOIN MovieGenres MG ON M.Id = MG.MovieId
+--     JOIN Genres G ON MG.GenreId = G.Id
+--     JOIN MoviePersons MP ON MG.MovieId = MP.MovieId
+--     JOIN Roles R ON R.Id = MP.RoleId AND R.Name = 'Director'
+--     JOIN Persons P ON P.Id = MP.PersonId
+--     WHERE M.Imdb > 6
+-- ),
+--
+-- MovieActors AS (
+--     SELECT M.Title, M.Imdb, G.Name AS Genre, P.Name AS ActorName
+--     FROM Movies M
+--     JOIN MovieGenres MG ON M.Id = MG.MovieId
+--     JOIN Genres G ON MG.GenreId = G.Id
+--     JOIN MoviePersons MP ON MG.MovieId = MP.MovieId
+--     JOIN Roles R ON R.Id = MP.RoleId AND R.Name = 'Actor'
+--     JOIN Persons P ON P.Id = MP.PersonId
+--     WHERE M.Imdb > 6
+-- )
+-- SELECT MovieDirectors.Title, MovieDirectors.Imdb, MovieDirectors.Genre, MovieDirectors.DirectorName, MovieActors.ActorName
+-- FROM MovieDirectors
+-- INNER JOIN MovieActors ON MovieDirectors.Title = MovieActors.Title;
+
+
+-- --SUAL 1. 2-Cİ VERSİYA
+-- SELECT M.Title, M.Imdb, G.Name AS Genre,
+--        MAX(CASE WHEN R.Name = 'Director' THEN P.Name END) AS DirectorName,
+--        MAX(CASE WHEN R.Name = 'Actor' THEN P.Name END) AS ActorName
+-- FROM Movies M
+-- JOIN MovieGenres MG ON M.Id = MG.MovieId
+-- JOIN Genres G ON MG.GenreId = G.Id
+-- JOIN MoviePersons MP ON MG.MovieId = MP.MovieId
+-- JOIN Roles R ON R.Id = MP.RoleId
+-- JOIN Persons P ON P.Id = MP.PersonId
+-- WHERE M.Imdb > 6
+-- GROUP BY M.Title, M.Imdb, G.Name;
+
+-- --SUAL 1. 3-Cİ VERSİYA
+--     SELECT M.Title, M.Imdb, G.Name AS Genre, PD.Name AS DirectorName, PA.Name AS ActorName
+-- FROM Movies M
+-- JOIN MovieGenres MG ON M.Id = MG.MovieId
+-- JOIN Genres G ON MG.GenreId = G.Id
+-- JOIN MoviePersons MPD ON M.Id = MPD.MovieId AND MPD.RoleId IN (SELECT Id FROM Roles WHERE Name = 'Director')
+-- JOIN Persons PD ON MPD.PersonId = PD.Id
+-- JOIN MoviePersons MPA ON M.Id = MPA.MovieId AND MPA.RoleId IN (SELECT Id FROM Roles WHERE Name = 'Actor')
+-- JOIN Persons PA ON MPA.PersonId = PA.Id
+
+
+-- Sual 2. Genre adında "a" hərfi olan bütün filmlərin adını, imdb dəyərini, Genre adını
+-- gətirən select query-i yazın
+
+-- SELECT M.Title, M.Imdb, G.Name AS Genre
+-- FROM Movies M
+-- JOIN MovieGenres MG ON M.Id = MG.MovieId
+-- JOIN Genres G ON MG.GenreId = G.Id
+-- WHERE  G.Name LIKE '%a%';
+
+
+-- Sual 3. Film adının uzunluğu 10-dan böyük olan və film adının sonu "t" hərfiylə bitən bütün
+-- filmlərin adını, imdb dəyərini, Duration dəyərini, Genre adını gətirən select query-i yazın
+
+-- SELECT M.Title, M.Imdb, M.Duration, G.Name AS Genre
+-- FROM Movies M
+-- JOIN MovieGenres MG ON M.Id = MG.MovieId
+-- JOIN Genres G ON MG.GenreId = G.Id
+-- WHERE LEN(M.Title) > 10 AND M.Title LIKE '%T';
+
+
+-- Sual 4. Imdb point-i ümumi filmlərin imdb point-lərini ortalamasından böyük olan filmlərin
+-- adını, imdb dəyərini, Genre adını, Director adını və aktyor adını gətirən və imdb dəyərinə
+-- görə azalan sırayla düzən select query-i yazın
+
+-- SELECT M.Title, M.Imdb, G.Name AS Genre, PD.Name AS DirectorName, PA.Name AS ActorName
+-- FROM Movies M
+-- JOIN MovieGenres MG ON M.Id = MG.MovieId
+-- JOIN Genres G ON MG.GenreId = G.Id
+-- JOIN MoviePersons MPD ON M.Id = MPD.MovieId AND MPD.RoleId IN (SELECT Id FROM Roles WHERE Name = 'Director')
+-- JOIN Persons PD ON MPD.PersonId = PD.Id
+-- JOIN MoviePersons MPA ON M.Id = MPA.MovieId AND MPA.RoleId IN (SELECT Id FROM Roles WHERE Name = 'Actor')
+-- JOIN Persons PA ON MPA.PersonId = PA.Id
+-- WHERE M.Imdb >= (SELECT AVG(Imdb) FROM Movies)
+-- ORDER BY M.Imdb DESC;
+
