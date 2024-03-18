@@ -3,19 +3,19 @@ using Task_2_UserManagementSystem;
 
 try
 {
-    var name = UserInput.GetUserInput<string>(UserField.Name);
+    var name = UserInput.GetUserInput(UserField.Name);
     UserValidation.ValidateNotEmpty(name, UserField.Name);
 
-    var surname = UserInput.GetUserInput<string>(UserField.Surname);
+    var surname = UserInput.GetUserInput(UserField.Surname);
     UserValidation.ValidateNotEmpty(surname, UserField.Surname);
 
-    var age = UserInput.GetUserInput<string>(UserField.Age);
+    var age = UserInput.GetUserInput(UserField.Age);
     UserValidation.ValidateAge(age);
 
-    var password = UserInput.GetUserInput<string>(UserField.Password);
+    var password = UserInput.GetUserInput(UserField.Password);
     UserValidation.ValidatePassword(password);
 
-    var repeatPassword = UserInput.GetUserInput<string>(UserField.RepeartPassword);
+    var repeatPassword = UserInput.GetUserInput(UserField.RepeartPassword);
     UserValidation.ValidateRepeatPassword(password, repeatPassword);
 
     var newUser = new User(name, surname, int.Parse(age), password, repeatPassword);

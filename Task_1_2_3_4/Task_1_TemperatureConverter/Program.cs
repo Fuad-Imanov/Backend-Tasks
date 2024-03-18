@@ -1,13 +1,24 @@
 ﻿using Task_1_TemperatureConverter;
 
+try
+{
+    double celsiusDegree = UserInput.GetUserInputAsDouble("Please enter the Celsius temperature");
+    Celsius celsius = new Celsius(celsiusDegree);
 
+    Kelvin kelvin = celsius;
 
-Celsius celsius = new Celsius(13);
+    Console.WriteLine($"Celsius: {celsius.Degree}°C");
+    Console.WriteLine($"Kelvin: {kelvin.Degree}K");
+}
 
-Kelvin kelvin = celsius;
+catch (FormatException ex)
+{
+    Console.WriteLine($"Error: {ex.Message}. Please enter a valid number.");
+}
 
-Console.WriteLine($"Celsius: {celsius.Degree}°C");
-
-Console.WriteLine($"Kelvin: {kelvin.Degree}K");
+catch (Exception ex)
+{
+    Console.WriteLine($"Unexpected error: {ex.Message}");
+}
 
 Console.ReadKey();

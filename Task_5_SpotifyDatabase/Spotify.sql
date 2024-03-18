@@ -3,7 +3,7 @@
 --
 -- CREATE DATABASE Spotify;
 -- GO
---
+-- 
 -- USE Spotify;
 -- GO
 --
@@ -51,7 +51,7 @@
 --     FOREIGN KEY (MusicId) REFERENCES Musics(Id)
 -- );
 --
-
+--
 -- CREATE TABLE AlbumMusics (
 --     Id int PRIMARY KEY IDENTITY,
 --     AlbumId int,
@@ -59,8 +59,8 @@
 --     FOREIGN KEY (AlbumId) REFERENCES Albums(Id),
 --     FOREIGN KEY (MusicId) REFERENCES Musics(Id)
 -- );
-
-
+--
+--
 -- INSERT INTO Musics (Name, TotalSecond, ReleaseDate, CreatedDate, ListenerCount)
 -- VALUES ('Song 1', 180, '2023-01-01', '2023-01-01', 1000),
 --        ('Song 2', 240, '2023-02-01', '2023-02-01', 1500);
@@ -123,7 +123,7 @@
 --     AlbumMusics AM ON AL.Id = AM.AlbumId
 -- GROUP BY
 --     AL.Name;
---
+
 
 
 
@@ -154,6 +154,6 @@
 --         m.ListenerCount > @listenerCount
 --         AND al.Name = @AlbumName;
 -- END;
---
+
 
 -- EXEC SearchMusicByListenerCountAndAlbum @listenerCount = 500, @AlbumName = 'Album 1';

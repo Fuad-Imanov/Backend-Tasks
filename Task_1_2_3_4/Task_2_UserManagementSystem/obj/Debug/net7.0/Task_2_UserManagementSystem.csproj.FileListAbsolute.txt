@@ -52,3 +52,4 @@ C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_2_UserManagementSystem\
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_2_UserManagementSystem\obj\Debug\net7.0\Task_2_UserManagementSystem.pdb
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_2_UserManagementSystem\obj\Debug\net7.0\Task_2_UserManagementSystem.genruntimeconfig.cache
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_2_UserManagementSystem\obj\Debug\net7.0\ref\Task_2_UserManagementSystem.dll
+C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_2_UserManagementSystem\obj\Debug\net7.0\Task_2_UserManagementSystem.sourcelink.json

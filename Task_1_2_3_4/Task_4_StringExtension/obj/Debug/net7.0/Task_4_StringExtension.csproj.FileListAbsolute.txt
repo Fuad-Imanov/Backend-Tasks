@@ -52,3 +52,4 @@ C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_4_StringExtension\obj\D
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_4_StringExtension\obj\Debug\net7.0\Task_4_StringExtension.pdb
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_4_StringExtension\obj\Debug\net7.0\Task_4_StringExtension.genruntimeconfig.cache
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_4_StringExtension\obj\Debug\net7.0\ref\Task_4_StringExtension.dll
+C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_4_StringExtension\obj\Debug\net7.0\Task_4_StringExtension.sourcelink.json

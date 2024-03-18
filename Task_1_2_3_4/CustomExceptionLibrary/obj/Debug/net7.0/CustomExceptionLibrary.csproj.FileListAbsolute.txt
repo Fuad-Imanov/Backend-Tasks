@@ -31,3 +31,4 @@ C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\CustomExceptionLibrary\obj\D
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\CustomExceptionLibrary\obj\Debug\net7.0\refint\CustomExceptionLibrary.dll
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\CustomExceptionLibrary\obj\Debug\net7.0\CustomExceptionLibrary.pdb
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\CustomExceptionLibrary\obj\Debug\net7.0\ref\CustomExceptionLibrary.dll
+C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\CustomExceptionLibrary\obj\Debug\net7.0\CustomExceptionLibrary.sourcelink.json

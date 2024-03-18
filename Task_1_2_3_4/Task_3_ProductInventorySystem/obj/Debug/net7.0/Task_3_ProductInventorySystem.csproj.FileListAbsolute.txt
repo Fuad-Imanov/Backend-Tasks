@@ -52,3 +52,4 @@ C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_3_ProductInventorySyste
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_3_ProductInventorySystem\obj\Debug\net7.0\Task_3_ProductInventorySystem.pdb
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_3_ProductInventorySystem\obj\Debug\net7.0\Task_3_ProductInventorySystem.genruntimeconfig.cache
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_3_ProductInventorySystem\obj\Debug\net7.0\ref\Task_3_ProductInventorySystem.dll
+C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_3_ProductInventorySystem\obj\Debug\net7.0\Task_3_ProductInventorySystem.sourcelink.json

@@ -40,3 +40,4 @@ C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_1_TemperatureConverter\
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_1_TemperatureConverter\obj\Debug\net7.0\Task_1_TemperatureConverter.pdb
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_1_TemperatureConverter\obj\Debug\net7.0\Task_1_TemperatureConverter.genruntimeconfig.cache
 C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_1_TemperatureConverter\obj\Debug\net7.0\ref\Task_1_TemperatureConverter.dll
+C:\Users\Acer06\Pictures\Backend Tasks\Task_1_2_3_4\Task_1_TemperatureConverter\obj\Debug\net7.0\Task_1_TemperatureConverter.sourcelink.json
