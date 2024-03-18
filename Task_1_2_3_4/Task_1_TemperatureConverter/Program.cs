@@ -5,7 +5,7 @@ try
     double celsiusDegree = UserInput.GetUserInputAsDouble("Please enter the Celsius temperature");
     Celsius celsius = new Celsius(celsiusDegree);
 
-    Kelvin kelvin = celsius;
+    Kelvin kelvin = celsius; 
 
     Console.WriteLine($"Celsius: {celsius.Degree}°C");
     Console.WriteLine($"Kelvin: {kelvin.Degree}K");
