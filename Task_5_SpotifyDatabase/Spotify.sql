@@ -22,7 +22,6 @@
 --     Id int PRIMARY KEY IDENTITY,
 --     Name nvarchar(50),
 --     AboutArtist nvarchar(max),
---     Age int,
 --     BirthDate datetimeoffset,
 --     CreateDate datetimeoffset,
 --     UpdateDate datetimeoffset null
@@ -66,9 +65,9 @@
 -- VALUES ('Song 1', 180, '2023-01-01', '2023-01-01', 1000),
 --        ('Song 2', 240, '2023-02-01', '2023-02-01', 1500);
 --
--- INSERT INTO Artists (Name, AboutArtist, Age, BirthDate, CreateDate)
--- VALUES ('Artist 1', 'About Artist 1', 30, '1992-01-01', '2023-01-01'),
---        ('Artist 2', 'About Artist 2', 25, '1997-01-01', '2023-02-01');
+-- INSERT INTO Artists (Name, AboutArtist,  BirthDate, CreateDate)
+-- VALUES ('Artist 1', 'About Artist 1',  '1992-01-01', '2023-01-01'),
+--        ('Artist 2', 'About Artist 2',  '1997-01-01', '2023-02-01');
 --
 -- INSERT INTO Albums (Name, ReleaseDate, CreateDate)
 -- VALUES ('Album 1', '2023-03-01', '2023-03-01'),
